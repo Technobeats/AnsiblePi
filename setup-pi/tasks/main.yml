@@ -1,2 +1,22 @@
 ---
 # tasks file for setup-pi
+
+- name: apt-get update
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Update all packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+
+- name: Add Fan Control
+  ansible.builtin.template:
+    src: templates/firmware_config.txt
+    dest: /boot/firmware/config.txt
+    #backup: yes
+    owner: root
+    group: root
+    mode: '0755'
+
+- include: docker.yml

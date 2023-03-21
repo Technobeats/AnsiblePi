@@ -9,3 +9,9 @@
 - vi /etc/sudoers
 
       <username> ALL=(ALL) NOPASSWD:ALL
+
+
+# Todo
+- linting
+- docker-compose container
+- openvpn
