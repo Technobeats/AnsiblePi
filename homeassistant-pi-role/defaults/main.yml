@@ -1,0 +1,7 @@
+---
+# defaults file for homeassistant-pi-role
+
+
+homeassistant_dir: /opt/docker-compose-files/homeassistant
+homeassistant_img: ghcr.io/home-assistant/home-assistant:stable
+p1_port: true

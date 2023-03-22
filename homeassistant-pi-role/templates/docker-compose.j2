@@ -1,0 +1,15 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "{{homeassistant_img}}"
+    volumes:
+      - {{ homeassistant_dir }}/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+{% if p1_port == true %}
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+{% endif %}

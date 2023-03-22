@@ -1,0 +1,27 @@
+---
+# tasks file for homeassistant-pi-role
+
+- name: Create home-assistant dir
+  file:
+    path: "{{ homeassistant_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Create home-assistant config dir
+  file:
+    path: "{{ homeassistant_dir }}/config"
+    state: directory
+    mode: '0755'
+
+- name: Copy home-assistant docker-compose file
+  template:
+    src: templates/docker-compose.j2
+    dest: "{{ homeassistant_dir }}/docker-compose.yml"
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Start home-assistant
+  community.docker.docker_compose:
+    project_src: "{{ homeassistant_dir }}"
+    state: present

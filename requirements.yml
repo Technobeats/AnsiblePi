@@ -1,0 +1,5 @@
+collections:
+  - name: community.docker
+    verion: 3.4.2
+    src: https://github.com/ansible-collections/community.docker
+    scm: git

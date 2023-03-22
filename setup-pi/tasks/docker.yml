@@ -67,3 +67,17 @@
     name: docker
     state: started
     enabled: true
+
+- name: Install docker-compose dependencies
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  loop:
+    - docker-compose
+
+- name: Install Docker SDK, compose for python # required for community.docker.docker_compose
+  pip:
+    name:
+      - docker
+    executable: pip3
