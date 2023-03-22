@@ -2,4 +2,5 @@
   become: yes
   roles:
     #- setup-pi
-    - homeassistant-pi-role
+    #- homeassistant-pi-role
+    - duckdns-pi-role

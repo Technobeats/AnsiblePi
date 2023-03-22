@@ -1,0 +1,5 @@
+---
+# defaults file for duckdns-pi-role
+duckdns_dir: /opt/duckdns
+duck_domain: changeme
+duck_token: changeme

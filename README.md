@@ -6,7 +6,7 @@ Ansible playbook to do basic pi setup
 - Configure fan-speed to avoid noisy PI
 - Install docker
 - Deploy Home-assistant with docker-compose
-- Install duckduckDNS #todo
+- Install duckduckDNS
 - Install openvn #todo
 - Deploy PiHole with docker-compose #todo
 - Mount external HDD / USB for Home-assist #todo

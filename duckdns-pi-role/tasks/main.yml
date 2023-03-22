@@ -1,0 +1,22 @@
+---
+# tasks file for duckdns-pi-role
+
+- name: Create duck DNS dir
+  file:
+    path: "{{ duckdns_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Copy Duck DNS file
+  template:
+    src: templates/duckdns.sh.j2
+    dest: "{{ duckdns_dir }}/duckdns.sh"
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Run Duck DNS"
+  ansible.builtin.cron:
+    name: "Run Duck DNS"
+    special_time: "hourly"
+    job: "{{ duckdns_dir }}/duckdns.sh >/dev/null 2>&1"
