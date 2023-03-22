@@ -1,6 +1,15 @@
 # Ansible Raspberry Pi
 
-Ansible playbook to do basic pi setupL
+Ansible playbook to do basic pi setup
+
+- Update OS
+- Configure fan-speed to avoid noisy PI
+- Install docker
+- Deploy Home-assistant with docker-compose
+- Install duckduckDNS #todo
+- Install openvn #todo
+- Deploy PiHole with docker-compose #todo
+- Mount external HDD / USB for Home-assist #todo
 
 #### Raspberry Pi OS
     Ubuntu 22.10
@@ -24,8 +33,3 @@ Ansible playbook to do basic pi setupL
 
     make install
     make ansible
-
-# Todo
-- linting
-- duckdns
-- openvpn
