@@ -18,7 +18,7 @@ Ansible playbook to do basic pi setup
     5.19.0-1004-raspi
 
 #### Pre-requirements
-- Flash OS with user `Raspberry Pi Images`
+- Flash OS with `Raspberry Pi Images`
   - Adcanced settings:
     - set wifi
     - add user
@@ -33,3 +33,7 @@ Ansible playbook to do basic pi setup
 
     make install
     make ansible
+
+
+#### Misc
+- DuckDNS var files is encrypted with vault to secure store token and domain.
