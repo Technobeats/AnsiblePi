@@ -1,5 +1,6 @@
+---
 - hosts: pi
-  become: yes
+  become: true
   roles:
     #- setup-pi
     #- homeassistant-pi-role

@@ -6,7 +6,7 @@ Ansible playbook to do basic pi setup
 - Configure fan-speed to avoid noisy PI
 - Install docker
 - Deploy Home-assistant with docker-compose
-- Install duckduckDNS
+- Install duck DNS
 - Install openvn #todo
 - Deploy PiHole with docker-compose #todo
 - Mount external HDD / USB for Home-assist #todo
@@ -18,13 +18,13 @@ Ansible playbook to do basic pi setup
     5.19.0-1004-raspi
 
 #### Pre-requirements
-- Flash OS with user `Raspberry Pi Images` 
+- Flash OS with user `Raspberry Pi Images`
   - Adcanced settings:
-    - set wifi 
+    - set wifi
     - add user
 - Copy SSH key to pi `ssh-copy-id -i id_rsa <username>@192.168.0.xx`
 - set NOPASSWD for user
-      
+
       # vi /etc/sudoers
       <username> ALL=(ALL) NOPASSWD:ALL
 

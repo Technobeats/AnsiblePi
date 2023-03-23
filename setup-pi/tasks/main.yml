@@ -3,7 +3,7 @@
 
 - name: apt-get update
   apt:
-    update_cache: yes
+    update_cache: true
 
 - name: Update all packages to their latest version
   apt:
@@ -25,5 +25,3 @@
     state: present
 
 - include: docker.yml
-
-

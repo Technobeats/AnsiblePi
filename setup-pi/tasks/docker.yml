@@ -1,10 +1,11 @@
+---
 # Docker ubuntu
 
 - name: Install docker dependencies
   apt:
     name: "{{item}}"
     state: present
-    update_cache: yes
+    update_cache: true
   loop:
     - ca-certificates
     - curl
@@ -36,7 +37,7 @@
 
 - name: apt-get update
   apt:
-    update_cache: yes
+    update_cache: true
 
 - name: Update all packages to their latest version
   apt:
@@ -47,7 +48,7 @@
   apt:
     name: "{{item}}"
     state: present
-    update_cache: yes
+    update_cache: true
   loop:
     - docker-ce
     - docker-ce-cli
@@ -60,7 +61,7 @@
   user:
     name: "{{ ansible_facts['user_id'] }}"
     group: docker
-    append: yes
+    append: true
 
 - name: Start / Enable Docker
   service:
@@ -72,11 +73,11 @@
   apt:
     name: "{{item}}"
     state: present
-    update_cache: yes
+    update_cache: true
   loop:
     - docker-compose
 
-- name: Install Docker SDK, compose for python # required for community.docker.docker_compose
+- name: Install Docker SDK, compose for python  # required for community.docker.docker_compose
   pip:
     name:
       - docker
